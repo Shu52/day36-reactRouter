@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import LiComponets from "./LiComponets"
 
 export default class AnimalList extends Component {
     state = {
@@ -14,15 +14,21 @@ export default class AnimalList extends Component {
     }
 
     render() {
-        return (
+        return(
             <React.Fragment>
                 {<h1>Animals</h1>}
-                <ul>
+               
                 {
-                    this.state.animals.map(animal =>  <li key = {animal.id}>{animal.name}</li> )
+                     <ul>
+                     {this.state.animals.map(animal => {
+                       return <LiComponets key={animal.id} theStuffIPassIn={animal}  />
                 }
-                </ul>
+                      ) }
+            </ul>
+        }
+            
             </React.Fragment>
-        )
+            )
+        }
+       
     }
-}
