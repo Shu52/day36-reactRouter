@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import LiComponets from "./LiComponets"
+import Employee from "./Employee"
 
 export default class EmployeeList extends Component {
     state = {
@@ -13,16 +13,13 @@ export default class EmployeeList extends Component {
 
     render() {
         return (
-            
-            <React.Fragment>
-                {<h1>Employees</h1>}
-                <ul>
-                {this.state.employees.map(employee => {
-                       return <LiComponets key={employee.id} theStuffIPassIn={employee}  />
+            <ul>
+                {
+                    this.state.employees.map(employee=>{
+                       return <Employee employee={employee} key={employee.id}/>
+                    })
                 }
-                      ) }
-                </ul>
-            </React.Fragment>
+            </ul>
         )
     }
 }

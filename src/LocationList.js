@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LiComponets from "./LiComponets"
+import Location from "./Location"
 
 export default class LocationList extends Component {
     state = {
@@ -10,17 +10,13 @@ export default class LocationList extends Component {
     }
     render() {
         return (
-            <React.Fragment>
-                {<h1>Locations</h1>}
-            {
-                <ul>
-                {this.state.locations.map(location => {
-                       return <LiComponets key={location.id} theStuffIPassIn={location}  />
+            <ul>
+                {
+                    this.state.locations.map(location=>{
+                       return <Location location={location} key={location.id}/>
+                    })
                 }
-                      ) }
-                </ul>
-            }
-            </React.Fragment>
+            </ul>
         )
     }
 }
