@@ -6,6 +6,7 @@ import EmployeeList from './EmployeeList'
 import Animal from './Animal'
 import Login from './Login'
 import Employee from './Employee'
+import Location from "./Location"
 
 export default class ApplicationViews extends Component {
 
@@ -22,7 +23,12 @@ export default class ApplicationViews extends Component {
                         return <Login />
                     }
                     }} />
-                    
+                     <Route exact path="/locations/:locationsId" render={(props) => {
+                    return <Location location={props.location.state.location} >
+                    {props.location.state.location.name}
+                    </Location>
+                }} />
+
                 <Route exact path="/animals" render={props => {
                     if (this.isAuthenticated()) {
                         return <AnimalList />
@@ -30,8 +36,11 @@ export default class ApplicationViews extends Component {
                         return <Login />
                     }
                     }} />
+                    
                 <Route path="/animals/:animalId" render={(props) => {
-                    return <Animal animal={props.location.state.animal} />
+                    return <Animal animal={props.location.state.animal} >
+                    {props.location.state.animal.name}
+                    </Animal>
                 }} />
                 <Route exact path="/employees" render={props => {
                     if (this.isAuthenticated()) {
@@ -41,7 +50,9 @@ export default class ApplicationViews extends Component {
                     }
                     }} />
                     <Route path="/employees/:employeeId" render={(props) => {
-                    return <Employee employee={props.location.state.employee} />
+                    return <Employee employee={props.location.state.employee} >
+                    {props.location.state.employee.name}
+                    </Employee>
                 }} />
                 <Route path="/login" component={Login} />
             </React.Fragment>

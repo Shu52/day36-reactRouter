@@ -1,0 +1,21 @@
+
+{
+    "employees": [
+        { "id": 1, "name": "Jessica Younker" },
+        { "id": 2, "name": "Jordan Nelson" },
+        { "id": 3, "name": "Zoe LeBlanc" },
+        { "id": 4, "name": "Blaise Roberts" }
+    ],
+    "animals": [
+        { "id": 1, "name": "Doodles", "breed": "German Shepherd", "type":"animals" },
+        { "id": 2, "name": "Jack", "breed": "Cocker Spaniel", "type":"animals" },
+        { "id": 3, "name": "Angus", "breed": "Dalmatian", "type":"animals" },
+        { "id": 4, "name": "Henley", "breed": "Carolina Retriever", "type":"animals" },
+        { "id": 5, "name": "Derkins", "breed": "Pug", "type":"animals" },
+        { "id": 6, "name": "Checkers", "breed": "Bulldog", "type":"animals" }
+    ],
+    "locations": [
+        { "id": 1, "name": "Nashville North" },
+        { "id": 2, "name": "Nashville South" }
+    ]
+}

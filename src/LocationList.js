@@ -3,20 +3,24 @@ import Location from "./Location"
 
 export default class LocationList extends Component {
     state = {
-        locations: [
-            { id: 1, name: "Nashville North" },
-            { id: 2, name: "Nashville South" }
-        ]
+        locations: []
+    }
+    componentDidMount () {
+        fetch("http://localhost:5002/locations")
+        .then(e => e.json())
+        .then(locations => this.setState({ locations: locations }))
     }
     render() {
         return (
-            <ul>
+            <React.Fragment>
                 {
-                    this.state.locations.map(location=>{
-                       return <Location location={location} key={location.id}/>
-                    })
+                    this.state.locations.map(location=>
+                        <Location key={location.id} location={location}>
+                        {location.name}
+                    </Location>
+                    )
                 }
-            </ul>
+             </React.Fragment>
         )
     }
 }
