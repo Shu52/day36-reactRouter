@@ -7,7 +7,7 @@ export default props => {
         <div className="card" style={{width: `18rem`}}>
             <div className="card-body">
                 <h5 className="card-title">
-                    {props.children}
+                    {props.animal.name}
                 </h5>
                 <p className="card-text">{props.animal.breed}</p>
                 {
@@ -19,6 +19,7 @@ export default props => {
                     Details
                 </Link>
                 }
+               <a href="# no hash" onClick={() => props.checkOutAnimal(props.animal.id)}>Delete</a>
             </div>
         </div>
     )
