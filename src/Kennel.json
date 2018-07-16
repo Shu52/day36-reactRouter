@@ -1,5 +1,6 @@
 {
-  "employees": [{
+  "employees": [
+    {
       "id": 1,
       "name": "Jessica Younker"
     },
@@ -16,7 +17,8 @@
       "name": "Blaise Roberts"
     }
   ],
-  "animals": [{
+  "animals": [
+    {
       "id": 1,
       "name": "Doodles",
       "breed": "German Shepherd",
@@ -51,9 +53,16 @@
       "name": "Checkers",
       "breed": "Bulldog",
       "type": "animals"
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
     }
   ],
-  "locations": [{
+  "locations": [
+    {
       "id": 1,
       "name": "Nashville North"
     },

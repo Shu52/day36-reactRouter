@@ -7,7 +7,7 @@ import Animal from './Animal'
 import Login from './Login'
 import Employee from './Employee'
 import Location from "./Location"
-
+import AddAnimal from "./AddAnimal"
 export default class ApplicationViews extends Component {
 
     // Check if credentials are in local storage
@@ -55,6 +55,7 @@ export default class ApplicationViews extends Component {
                     </Employee>
                 }} />
                 <Route path="/login" component={Login} />
+                <Route path ="/AddAnimal" component ={AddAnimal} />
             </React.Fragment>
         )
     }

@@ -28,6 +28,7 @@ export default class AnimalList extends Component {
             })
         })
     }
+    
     render() {
         return (
             <React.Fragment>
